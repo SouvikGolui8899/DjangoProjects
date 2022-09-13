@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Products</h1>
+{% if object %}
+    <ul>
+        <li><p><a href={{ object.get_absolute_url }}>{{object.title}}</a><p></li>
+    </ul>
+{% elif object_list %}
+    <ol>
+    {% for obj in object_list %}
+        <li><p><a href={{ obj.get_absolute_url }}>{{obj.title}}</a><p></li>
+    {% endfor %}
+    <ol>
+{% else %}
+    <p>Product list is empty</p>
+{% endif %}
+{% endblock %}

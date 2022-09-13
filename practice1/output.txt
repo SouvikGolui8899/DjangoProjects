@@ -1,0 +1,6 @@
+BEGIN;
+--
+-- Create model Article
+--
+CREATE TABLE "blog_article" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(120) NOT NULL, "content" text NOT NULL, "active" bool NOT NULL);
+COMMIT;

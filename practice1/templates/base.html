@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Django Tutorial</title>
+    </head>
+    <body>
+        {% include 'navigation.html' %}
+        {% block content %}
+        Welcome. Logged in as {{ current_user }}
+        {% endblock %}
+    </body>
+</html>

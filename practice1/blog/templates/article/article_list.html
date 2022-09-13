@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Blog</h1>
+{% if object_list %}
+    <ol>
+    {% for obj in object_list %}
+        <li><p><a href={{ obj.get_absolute_url }}>{{obj.title}}</a><p>
+            <button type="button"><a href="{% url 'articles:article_delete' obj.id %}">Delete</a></button>
+            <button type="button"><a href="{% url 'articles:article_update' obj.id %}">Update</a></button>
+        </li>
+
+    {% endfor %}
+    <ol>
+{% else %}
+    <p>Blog list is empty</p>
+{% endif %}
+{% endblock %}

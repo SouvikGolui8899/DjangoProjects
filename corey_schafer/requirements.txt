@@ -1,0 +1,4 @@
+Django==4.1
+crispy-bootstrap5==0.6
+# For image field use Pillow
+Pillow==9.2.0
