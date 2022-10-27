@@ -1,5 +1,14 @@
-autopep8
-pylint
-pylint-django
-django-extensions
-django
+# For development only (not for production)
+autopep8==1.7.0
+pylint==2.15.5
+pylint-django==2.5.3
+django-extensions==3.2.1
+
+# Production dependencies
+django==4.1.2
+pillow==9.2.0
+crispy-bootstrap5==0.7
+matplotlib==3.6.0
+seaborn==0.12.1
+pandas==1.5.1
+xhtml2pdf==0.2.8
